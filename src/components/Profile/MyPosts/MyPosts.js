@@ -1,26 +1,26 @@
 import React from "react";
-import style from "./Profile.module.css";
+import style from "./MyPosts.module.css";
+import Post from "./Post/Post";
 
-const Profile = () => {
+const MyPosts = () => {
     return (
-        <div className={style.content}>
-            <div>
-                <img
-                    src="https://image.freepik.com/free-vector/people-eating-healthy-exercising-regularly_53876-64671.jpg"
-                    alt=""
-                />
-            </div>
-            <div>Pic + description</div>
-            <div>
-                My posts
-                <div>New post</div>
-                <div>
-                    <div>Post 1</div>
-                    <div>Post 2</div>
-                </div>
+        <div>my posts
+            <br></br>
+            <textarea>
+
+            </textarea>
+            <br></br>
+            <button>Submit</button>
+            <div>New post</div>
+            <div className={style.posts}>
+                <Post message="hi" likes="3"/>
+                <Post message="hello my friend" likes="2"/>
+                <Post message="wow amazing" likes="8"/>
+                <Post/>
+                <Post/>
             </div>
         </div>
     );
 };
 
-export default Profile;
+export default MyPosts;

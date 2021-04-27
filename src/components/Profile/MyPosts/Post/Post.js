@@ -1,18 +1,19 @@
 import React from "react";
-import style from "./MyPosts.module.css";
+import style from "./Post.module.css";
 
-const MyPosts = () => {
+const Post = (props) => {
     return (
-        <div>my posts <br></br>
-            <textarea></textarea><br></br>
-                <button>Submit</button>
-                <div>New post</div>
-                <div className={style.posts}>
-                    <div className={style.item}>Post 1</div>
-                    <div>Post 2</div>
-                </div>
+        <div className={style.item}>
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_I0JFO2DxoAV3J-sI7ajtx0qW0Q5neaY_A&usqp=CAU"/>
+            <br></br>
+            {props.message}
+            <div>
+                <span>{props.likes} &#10084;</span>
             </div>
+        </div>
+
     );
 };
 
-export default MyPosts;
+export default Post;
